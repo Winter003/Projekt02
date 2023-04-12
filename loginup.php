@@ -1,11 +1,33 @@
 <?php
 include('site/header.php');
-
 ?>
+ <?php 
+    if(isset($_POST['submit'])) {
+       $login = htmlspecialchars($_POST['login']);
+       $pass = htmlentities($_POST['password']);
+       // echo $login . " " . $pass;
+       $conn = mysqli_connect('localhost','webPLA','123asd','portal');
+       if (!$conn) {
+        echo 'Błąd połączenia z baża danych. Error : ' . mysqli_connect_error();
+       } else {
+        $sqlSelect = 'SELECT login, haslo FROM users';
+        $result = mysqli_query($conn, $sqlSelect);
+        $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $flag = true;
+        foreach ($users as $user) {
+           // echo $user['login'] . " - " . $user['haslo'] . "<br>";
+        if($user['login'] == $login && $user['haslo'] == $pass ){
+         echo "Jestem zalogowany";
+         $flag = false;
+         break;  
+        }
+      } 
+    if ($flag) echo "Błędnie podane hasło.";
+       }
+    }
 
 
-
-
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,20 +40,24 @@ include('site/header.php');
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <form>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Adres E-mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text"></div>
+            <label for="exampleInputlogin1" class="form-label">Login</label>
+            <input type="login" class="form-control" id="exampleInputlogin1" aria-describedby="emailHelp" name="login">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Hasło</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
         </div>
         <button type="submit" class="btn btn-primary" name='submit'>Zaloguj</button>
         <button type="submit" class="btn btn-primary mb-3" name="cancel">Cancel</button>
     </form>
+</div>
+</div>
+</div>
     
 </body>
 </html>
