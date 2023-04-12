@@ -23,8 +23,8 @@
                             <div class="navbar-nav">
                                 <a class="nav-link active" aria-current="page" href="index.php">Strona główna</a>
                                 <a class="nav-link" href="signup.php">Sign Up</a>
-                                <a class="nav-link" href="login.php">Log In</a>
-                                <a class="nav-link" href="#">Pricing</a>
+                                <a class="nav-link" href="loginup.php">Log In</a>
+                                <a class="nav-link" href="kurs.php">Kurs</a>
                                 <a class="nav-link disabled">Disabled</a>
                             </div>
                         </div>
