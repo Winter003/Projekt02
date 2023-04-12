@@ -60,7 +60,8 @@ if (isset($_SESSION['loginSession'])) {
         <div class="cointainer">
             <div class="row">
                 <div class="col-12">
-                    <h1>Musisz się zalogować</h1>
+                    <h1>Brak dostępu do kursów </h1>
+                    <p>Musisz się <a href="loginup.php">zalogować </a> lub <a href="signup.php">zarejestrować</a> do portalu.</p>
                 </div>
             </div>
         </div>
