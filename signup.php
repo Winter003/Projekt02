@@ -70,8 +70,8 @@ if (isset($_POST['submit'])) {
                     <?php } ?>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Login" name="login">
                 </div>
+                <?php
                 <div class="mb-3">
-                    <?php
                     if ($error[2] != "") {
                     ?>
                         <label for="" class="alert alert-warning"><?php echo $error[2]; ?></label>
