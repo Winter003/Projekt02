@@ -43,9 +43,9 @@
             <div class="card">
   <img src="https://picsum.photos/300/200?random=3" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Podstawy HTML</h5>
+    <p class="card-text">Przyjemna i krótka droga do nauczenia się podstaw HTML. Kurs dla osób początkujących. Dzięki naszym kursom zdobędziesz lepszą pracę.</p>
+    <a href="kurs.php" class="btn btn-primary">Zapisz się na kurs</a>
   </div>
 </div>
 <br>
@@ -57,9 +57,9 @@
             <div class="card">
   <img src="https://picsum.photos/300/200?random=1" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Podstawy CSS</h5>
+    <p class="card-text">Naucz się upiększać strony dzięki stylom CSS.</p>
+    <a href="kurs.php" class="btn btn-primary">Zapisz się na kurs</a>
   </div>
 </div>
             </div>
@@ -68,9 +68,9 @@
             <div class="card">
   <img src="https://picsum.photos/300/200?random=2" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Podstawy JavaScript</h5>
+    <p class="card-text">Naucz się JavaScript od podstaw. Kurs dla początkujących. Zwiększ swoje kompetencje.</p>
+    <a href="kurs.php" class="btn btn-primary">Zapisz się na kurs</a>
   </div>
             </div>
         </div>
