@@ -11,8 +11,8 @@ if (isset($_POST['submit'])) {
     if ($nazwisko == "" || strlen($nazwisko) < 3) {
         $error[1] = "Brak nazwiska.";
     }
-    $mail = htmlspecialchars($_POST['mail']);
-    if ($mail == "") {
+    $email = htmlspecialchars($_POST['email']);
+    if ($email == "") {
         $error[2] = "Brak mail'a.";
     }
     $login = htmlspecialchars($_POST['login']);
@@ -71,14 +71,14 @@ if (isset($_POST['submit'])) {
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Login" name="login">
                 </div>
                 <?php
-                <div class="mb-3">
                     if ($error[2] != "") {
-                    ?>
+                        ?>
                         <label for="" class="alert alert-warning"><?php echo $error[2]; ?></label>
-                    <?php } ?>
+                        <?php } ?>
+                        <div class="mb-3">
                     <input type="mail" class="form-control" id="exampleFormControlInput1" 
 placeholder="nazwa@mail.com
-" name="mail">
+" name="email">
                 </div>
                 <div class="mb-3">
                     <?php
@@ -114,11 +114,19 @@ placeholder="nazwa@mail.com
 <!-- end - formularz -->
 <?php
 
-if($error[0] == "" && $error[1] == "" && $error[2] == "" && $error[3] == "" && $error[4] == "" && $error[5]) {
-  $conn = mysql_connect('localhost','webPLA','123asd','portal');
-  if ($conn) {
-    echo "Połączono z bazą danych";
-  }
+if ($error[0] == "" && $error[1] == "" && $error[2] == "" && $error[3] == "" && $error[4] == "" && $error[5] && isset($_POST['submit'])) {
+  $conn = mysqli_connect('localhost','webPLA','123asd','portal');
+  if (!$conn) {
+    echo "Błąd połączenia z bazą danych. Error; " , mysqli_connect_error();
+  } else {
+    echo 'Połączono z bazą danych!';
+$dataDodania = date("Y-m-d");
+    
+    $sql = "INSERT INTO users(imie,nazwisko,login,mail,haslo,regulamin,dataDodania) 
+    VALUES ('$imie','$nazwisko','$login','$email','$haslo1','true','$dataDodania')";
+    mysqli_query($conn,$sql);
+    mysqli_close($conn);
+}
 }
 
 ?> 
