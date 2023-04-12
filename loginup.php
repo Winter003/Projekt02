@@ -29,7 +29,8 @@ include('site/header.php');
             <label for="exampleInputPassword1" class="form-label">Hasło</label>
             <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
-        <button type="submit" class="btn btn-primary">Zaloguj</button>
+        <button type="submit" class="btn btn-primary" name='submit'>Zaloguj</button>
+        <button type="submit" class="btn btn-primary mb-3" name="cancel">Cancel</button>
     </form>
     
 </body>
