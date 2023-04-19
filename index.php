@@ -31,50 +31,46 @@
 <br>
 <br>
 <br>
-    <div class="container">
-        <div class="row">
-            <div class="col text-center box-margin">
+<div class="container">
+    <div class="row">
+        <div class="col text-center box-margin">
+        
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md box-margin">
+            <div class="card">
+            
+                <div class="card-body">
+                    <h5 class="card-title">Podstwa HTML</h5>
+                    <p class="card-text">Naucz się języka HTML od podstaw. Kurs dla osób początkujących. Dzięki naszym kursom zdobędziesz lepszą pracę.</p>
+                    <a href="kurs.php" class="btn btn-primary">zapisz się na kurs</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md box-margin">
+            <div class="card">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Podstawy CSS</h5>
+                    <p class="card-text">Naucz się upiększać strony dzięki stylom CSS. Kurs dla osób początkujących. Dzięki naszym kursom zdobędziesz lepszą pracę.</p>
+                    <a href="kurs.php" class="btn btn-primary">zapisz się na kurs</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md box-margin">
+            <div class="card">
                
+                <div class="card-body">
+                    <h5 class="card-title">Podstawy JavaScript</h5>
+                    <p class="card-text">Naucz się JavaScript od podstaw. Kurs dla osób początkujących. Dzięki naszym kursom zdobędziesz lepszą pracę.</p>
+                    <a href="kurs.php" class="btn btn-primary">zapisz się na kurs</a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md box-margin">
-            
-            <div class="card">
-  <img src="https://picsum.photos/300/200?random=3" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Podstawy HTML</h5>
-    <p class="card-text">Przyjemna i krótka droga do nauczenia się podstaw HTML. Kurs dla osób początkujących. Dzięki naszym kursom zdobędziesz lepszą pracę.</p>
-    <a href="kurs.php" class="btn btn-primary">Zapisz się na kurs</a>
-  </div>
+    </div>
 </div>
-<br>
-<br>
-<br>
-            </div>
-            <div class="col-md box-margin">
-            
-            <div class="card">
-  <img src="https://picsum.photos/300/200?random=1" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Podstawy CSS</h5>
-    <p class="card-text">Naucz się upiększać strony dzięki stylom CSS.</p>
-    <a href="kurs.php" class="btn btn-primary">Zapisz się na kurs</a>
-  </div>
-</div>
-            </div>
-            <div class="col-md box-margin">
-            
-            <div class="card">
-  <img src="https://picsum.photos/300/200?random=2" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Podstawy JavaScript</h5>
-    <p class="card-text">Naucz się JavaScript od podstaw. Kurs dla początkujących. Zwiększ swoje kompetencje.</p>
-    <a href="kurs.php" class="btn btn-primary">Zapisz się na kurs</a>
-  </div>
-            </div>
-        </div>
-     </div>
 
     <div class="container">
         <div class="row">
@@ -110,43 +106,7 @@
       </div>
     </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-        <ul class="list-group">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
-</div>
 
+<?php include('site/footer.php'); ?>
 
-<div class="col">
-<ul class="list-group">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
-</div>
-
-
-<div class="col">
-<ul class="list-group">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
-</div>
-
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
-
-
-</html>
+    

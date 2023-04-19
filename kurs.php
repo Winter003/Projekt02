@@ -25,8 +25,8 @@ if (isset($_SESSION['loginSession'])) {
                         <img src="https://picsum.photos/300/200?random=3" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kursy</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">Kurs HTML</p>
+                            <a href="kurs1.php" class="btn btn-primary">Zapraszamy!</a>
                         </div>
                     </div>
                     <br>
@@ -39,8 +39,8 @@ if (isset($_SESSION['loginSession'])) {
                         <img src="https://picsum.photos/300/200?random=1" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kursy</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">Kurs CSS</p>
+                            <a href="kurs2.php" class="btn btn-primary">Zapraszamy!</a>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@ if (isset($_SESSION['loginSession'])) {
                         <img src="https://picsum.photos/300/200?random=2" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kursy</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">Kurs JavaScript</p>
+                        <a href="kurs3.php" class="btn btn-primary">Zapraszamy!</a>
                     </div>
                 </div>
             </div>
@@ -67,3 +67,4 @@ if (isset($_SESSION['loginSession'])) {
         </div>
 
         <?php } ?>
+        <?php include('site/footer.php'); ?>

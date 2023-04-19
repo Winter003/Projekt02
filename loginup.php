@@ -91,3 +91,4 @@ include('site/header.php');
 </body>
 </html>
 <?php } ?>
+<?php include('site/footer.php'); ?>

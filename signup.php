@@ -1,6 +1,6 @@
 <?php include('site/header.php'); ?>
 <?php
-$error = array("", "", "", "", "", true);
+$error = array("", "", "", "", "", true, true);
 if (isset($_POST['submit'])) {
     $imie = htmlspecialchars($_POST['imie']);
     if ($imie == "" || strlen($imie) < 3) {
@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
     }
     $haslo1 = htmlspecialchars($_POST['haslo1']);
     $haslo2 = htmlspecialchars($_POST['haslo2']);
+
     if (
         !preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,20}$/', $haslo1)
         || !preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,20}$/', $haslo2)
@@ -33,6 +34,13 @@ if (isset($_POST['submit'])) {
         $error[5] = true;
     } else {
         $error[5] = false;
+    }
+    $kod = htmlspecialchars($_POST['kod']);
+    $codesave = htmlspecialchars($_POST['codesave']);
+    if ($kod == $codesave) {
+        $error[6] = true;
+    } else {
+        $error[6] = false;
     }
 }
 ?>
@@ -102,6 +110,25 @@ placeholder="nazwa@mail.com
                         Akceptuje regulamin strony Internetowej.
                     </label>
                 </div>
+                <div class="row justify content start formularz">
+                    
+                <label class="form-check-label alert alert-success" for="flexCheckChecked">
+                <?php
+                        $tmp = '';
+                        $kod = array();
+                        
+                        for($i=0;$i<4; $i++) {
+                            $kod[] = rand(0,9);
+                            echo $kod[$i];
+                            $tmp .= $kod[$i];
+                        }
+                        ?>
+                        </label>
+                        <input type="hidden" value="<?php echo $tmp; ?>" name="codesave" >
+                        <div class="col-xl-4 col-md-8">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Wpisz kod do wysłania" name="kod"> 
+                </div>
+                    </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary mb-3" name="submit">Załóż konto</button>
                     <button type="reset" class="btn btn-primary mb-3">Wyczyść</button>
@@ -112,19 +139,45 @@ placeholder="nazwa@mail.com
 </div>
 
 <?php
-            if ($error[0] == "" && $error[1] == "" && $error[2] == "" && $error[3] == "" && $error[4] == "" && $error[5] && isset($_POST['submit'])) {
+            if ($error[0] == "" && $error[1] == "" && $error[2] == "" && $error[3] == "" && $error[4] == "" && $error[5] && isset($_POST['submit']) && $error[6]) {
                 $conn = mysqli_connect('localhost', 'webPLA', '123asd', 'portal');
                 if (!$conn) {
                     echo 'Błąd połaczenia z bazą danych. Error : ' . mysqli_connect_error();
                 } else {
-                    
+                    $flagLogin = true;
+                    $flagEmail = true;
+                    $sqlSelect = 'SELECT login, email FROM users';
+                    $result = mysqli_query($conn, $sqlSelect);
+                    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    foreach ($users as $user1) {
+                        if ($user1['login'] == $login) {
+                            $flagLogin = false;
+                            break;
+                        }
+                    }
+                    foreach ($users as $user2) {
+                        if ($user2['email'] == $email) {
+                            $flagEmail - false;
+                            break;
+                        }
+                    }
+
+                    if ($flagLogin && $flagEmail) {
                     $datadodania = date("Y-m-d");
-                  
                     $sql = "INSERT INTO users(imie, nazwisko, login, email, haslo, regulamin, dataDodania) VALUES ('$imie','$nazwisko','$login','$email','$haslo1',true,'$datadodania')";
                     mysqli_query($conn, $sql);
+                    echo 'Dodano użytkownika!';
+                    } else {
+                        echo 'Podany login lub istnieje.';
+                    }
                     mysqli_close($conn);
 
-                    echo 'Dodano użytkownika!';
+                    
                 }
             }
             ?> 
+            <?php include('site/footer.php'); 
+            // https://www.oracle.com/pl/cloud/free/
+            ?>
+
+            

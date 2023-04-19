@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,9 +14,7 @@
             height: 480px;
             overflow: hidden;
             position: relative;
-            
         }
-
         img {
             position: absolute;
             top: 50%;
@@ -24,7 +22,7 @@
             transform: translate(-50%,-50%);
             min-height: 100%;
             min-width: 100%;
-            opacity: 1;
+            opacity: 0;
             animation: slider 15s infinite linear;
         }
         img:nth-child(2) {
@@ -33,10 +31,11 @@
         img:nth-child(3) {
             animation-delay: 10s;
         }
+
         h1 {
             position: absolute;
             font-size: 60px;
-            color: #FFFFFF;
+            color: #fff;
             background-color: rgba(0,0,0,.6);
             padding: 20px 40px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -45,40 +44,25 @@
             opacity: 0;
             animation: txt 15s infinite linear;
         }
-        h1:nth-of-type(1) {
+        h1:nth-of-type(1){
             left: 5%;
-            top: 5%;
+            top: 5%
         }
-        h1:nth-of-type(2) {
+        h1:nth-of-type(2){
             animation-delay: 5s;
         }
-        h1:nth-of-type(3) {
+        h1:nth-of-type(3){
             animation-delay: 10s;
             left: 60%;
+            top: 48%;
             bottom: 5%;
         }
+        
         @keyframes slider {
             0% {
                 opacity: 0;
             }
-            5%{
-                opacity: 1;
-            }
-            33.33% {
-                opacity: 1;
-            }
-            38.33% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-        @keyframes txt {
-            0% {
-                opacity: 0;
-            }
-            5%{
+            5% {
                 opacity: 1;
             }
             33.33% {
@@ -92,17 +76,34 @@
             }
         }
 
+        @keyframes txt {
+            0% {
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            33.33% {
+                opacity: 1;
+            }
+            38.33% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
 
     </style>
 </head>
 <body>
     <header>
-        <img src="img/water.jpg" alt="img001">
-        <img src="img/water2.jpg" alt="img002">
-        <img src="img/water3.jpg" alt="img003">
+        <img src="img/img001.jpg" alt="img001">
+        <img src="img/img002.jpg" alt="img002">
+        <img src="img/img003.jpg" alt="img003">
         <h1>Lorem, ipsum dolor.</h1>
-        <h1>Lorem, ipsum dolor sit.</h1>
-        <h1>Lorem, ipsum dolor sit amet.</h1>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h1>Lorem ipsum dolor sit amet.</h1>
     </header>
 </body>
 </html>

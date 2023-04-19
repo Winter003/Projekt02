@@ -2,6 +2,7 @@
             margin: 0;
             padding: 0;
         }
+      
         header {
             height: 480px;
             overflow: hidden;
@@ -48,6 +49,7 @@
             left: 60%;
             bottom: 5%;
         }
+     
         @keyframes slider {
             0% {
                 opacity: 0;
@@ -93,4 +95,10 @@
 
 .formularz {
     margin-bottom: 20px;
+    
+}
+
+.foot {
+    padding: 40px 0;
+    margin: 40px 0 0 0;
 }
