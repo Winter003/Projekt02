@@ -88,8 +88,8 @@
   </div>
 </div>
 
-            <div class="col">
-            <div class="card">
+      <div class="col">
+      <div class="card">
   <div class="card-body">
     <h5 class="card-title">Zaloguj</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -102,7 +102,6 @@
 <div class="container">
     <div class="row">
         <div class="col">
-
 
      <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">

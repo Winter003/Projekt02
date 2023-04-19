@@ -82,7 +82,7 @@ include('site/header.php');
             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
         </div>
         <button type="submit" class="btn btn-primary" name='submit'>Zaloguj</button>
-        <button type="submit" class="btn btn-primary mb-3" name="cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary" name="cancel">Cancel</button>
     </form>
 </div>
 </div>
